@@ -4,32 +4,41 @@
 This project is a Python-based web scraper that automatically collects top news headlines from a public news website (BBC News) and saves them into a `.txt` file.
 
 The project demonstrates basic to intermediate-level web scraping using:
-
 * `requests` – to fetch HTML content
 * `BeautifulSoup` – to parse and extract headline tags
 * `datetime` – to add timestamp to output file
 
 
 ## Project Files
-news-headline-scraper/
+websc/
 │
-├── basic_scraper.py
-├── intermediate_scraper.py
-├── advanced_scraper.py
+├── scrapper.py
+├── scraps.py
+├── news.py
+│
 ├── headlines.txt
+├── All_headlines.txt
+├── new_headlines.txt
+│
+├── output/
+│   ├── basic_output.png
+│   ├── intermediate_output.png
+│   └── advanced_output.png
+│
 └── README.md
+
 
 
 ## Code Versions Included
 
-### 1️) Basic Version
+### 1️) Basic Version[scrapper.py]
 * Fetches website HTML
 * Extracts `<h2>` headline tags
 * Saves headlines into `headlines.txt`
 * Simple and beginner-friendly
 
 
-### 2️) Intermediate Version
+### 2️) Intermediate Version[scraps.py]
 * Adds User-Agent headers
 * Includes proper error handling
 * Removes duplicate headlines
@@ -37,7 +46,7 @@ news-headline-scraper/
 * Uses modular functions for clean structure
 
 
-### 3️) Advanced Version (No Limit)
+### 3️) Advanced Version (No Limit)[news.py]
 * Fetches all valid headlines
 * Extracts `<h1>`, `<h2>`, and `<h3>` tags
 * Uses `set()` for automatic duplicate removal
@@ -53,7 +62,7 @@ pip install requests beautifulsoup4
 ## How to Run
 python filename.py
 
-After execution, a `headlines.txt` file will be generated automatically.
+After execution, `headlines.txt` files with different file names will be generated automatically for each versions.
 
 ## Learning Outcomes
 * Automating data collection from a public website
