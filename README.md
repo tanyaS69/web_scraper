@@ -21,9 +21,9 @@ websc/
 ├── new_headlines.txt
 │
 ├── output/
-│   ├── scrapper_out1.png & scrapper_out2.png
-│   ├── scraps_output.png 
-│   └── news_out1.png & news_out2.png
+│   ├── scrapper_out.png & All_headlines.png
+│   ├── scraps_out.png & headlines.png
+│   └── news_out.png & news_headlines.png
 │
 └── README.md
 
