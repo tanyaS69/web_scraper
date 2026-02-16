@@ -17,24 +17,22 @@ def fetch_headlines(url):
         response.raise_for_status()
 
     except requests.exceptions.RequestException as e:
-        print(f"❌ Error fetching website: {e}")
+        print(f"Error fetching website: {e}")
         return []
 
     soup = BeautifulSoup(response.text, "html.parser")
 
-    # Find all possible headline tags
     headline_tags = soup.find_all(["h1", "h2", "h3"])
 
-    headlines = set()  # using set to automatically remove duplicates
+    headlines = set()
 
     for tag in headline_tags:
         text = tag.get_text(strip=True)
 
-        # Basic filtering
         if text and len(text) > 25:
             headlines.add(text)
 
-    print(f"✅ Total headlines fetched: {len(headlines)}")
+    print(f"Total headlines fetched: {len(headlines)}")
 
     return sorted(headlines)
 
@@ -54,7 +52,7 @@ def save_to_file(headlines, filename="news_headlines.txt"):
         for i, headline in enumerate(headlines, 1):
             file.write(f"{i}. {headline}\n")
 
-    print(f"📁 Headlines successfully saved to {filename}")
+    print(f"Headlines successfully saved to {filename}")
 
 
 def main():
@@ -70,7 +68,7 @@ def main():
 
         save_to_file(headlines)
     else:
-        print("⚠️ No headlines found.")
+        print("No headlines found.")
 
 
 if __name__ == "__main__":
