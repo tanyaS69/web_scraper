@@ -21,9 +21,9 @@ websc/
 ├── new_headlines.txt
 │
 ├── output/
-│   ├── basic_output.png
-│   ├── intermediate_output.png
-│   └── advanced_output.png
+│   ├── scrapper_out1.png & scrapper_out2.png
+│   ├── scraps_output.png 
+│   └── news_out1.png & news_out2.png
 │
 └── README.md
 
