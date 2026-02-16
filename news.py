@@ -39,7 +39,7 @@ def fetch_headlines(url):
     return sorted(headlines)
 
 
-def save_to_file(headlines, filename="new_headlines.txt"):
+def save_to_file(headlines, filename="news_headlines.txt"):
     """
     Save headlines to a text file with timestamp
     """
